@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>PWILN Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chat Widget - Persatuan Warga</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-  <h1>Selamat Datang di Website PWILN</h1>
-  <p>Deploy aman ke GitHub Pages berhasil 🎉</p>
+  <header>
+    <h1>💬 AI Chat Widget</h1>
+    <p>Pilih AI: ChatGPT atau Gemini</p>
+  </header>
+
+  <main>
+    <div id="chat-box"></div>
+
+    <div class="controls">
+      <select id="aiSelect">
+        <option value="chatgpt">ChatGPT</option>
+        <option value="gemini">Gemini</option>
+      </select>
+      <input type="text" id="userInput" placeholder="Tulis pesan..." />
+      <button onclick="sendMessage()">Kirim</button>
+    </div>
+
+    <div class="features">
+      <button onclick="exportTXT()">💾 Export TXT</button>
+      <button onclick="exportPDF()">📄 Export PDF</button>
+      <button onclick="clearChat()">🗑️ Hapus Chat</button>
+      <button onclick="toggleMusic()">🎶 Musik</button>
+      <button onclick="toggleNotif()">🔔 Notifikasi</button>
+    </div>
+  </main>
+
+  <audio id="notifSound" src="assets/sounds/notif.ogg" preload="auto"></audio>
+  <audio id="bgMusic" src="assets/sounds/pacu_jalur.mp3" preload="auto" loop></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>

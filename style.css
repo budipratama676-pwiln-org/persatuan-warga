@@ -1,15 +1,49 @@
 body {
   font-family: Arial, sans-serif;
+  background: url('assets/images/background.jpg') no-repeat center center/cover;
+  color: #fff;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  margin-top: 50px;
-  background: #f0f0f0;
 }
 
-h1 {
-  color: #2c3e50;
+header {
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-bottom: 2px solid #0ff;
 }
 
-p {
-  color: #27ae60;
-  font-size: 18px;
+#chat-box {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(0,0,0,0.5);
+  border: 2px solid #0ff;
+  border-radius: 10px;
+  padding: 15px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.controls, .features {
+  margin: 10px auto;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #0ff;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #08f;
+  color: #fff;
 }
